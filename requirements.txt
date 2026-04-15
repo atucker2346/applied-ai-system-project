@@ -1,0 +1,4 @@
+sentence-transformers
+pdfplumber
+scikit-learn
+streamlit
