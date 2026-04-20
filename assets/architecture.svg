@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420">
+  <defs>
+    <style>
+      .box { fill: #f4f6fb; stroke: #334; stroke-width: 1.5; rx: 8; }
+      .title { font: 600 14px system-ui, sans-serif; fill: #1a1a1a; }
+      .sub { font: 12px system-ui, sans-serif; fill: #333; }
+      .arrow { stroke: #2563eb; stroke-width: 2; fill: none; marker-end: url(#m); }
+      .human { fill: #ecfdf5; stroke: #047857; stroke-width: 1.5; rx: 8; }
+    </style>
+    <marker id="m" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+  <text x="460" y="28" text-anchor="middle" class="title" font-size="18">AI Resume Screener  System Architecture</text>
+
+  <rect class="human" x="40" y="60" width="140" height="72"/>
+  <text x="110" y="92" text-anchor="middle" class="title">Human</text>
+  <text x="110" y="112" text-anchor="middle" class="sub">upload PDF + JD</text>
+
+  <rect class="box" x="220" y="60" width="160" height="72"/>
+  <text x="300" y="92" text-anchor="middle" class="title">Streamlit UI</text>
+  <text x="300" y="112" text-anchor="middle" class="sub">guardrails + display</text>
+
+  <rect class="box" x="420" y="60" width="180" height="72"/>
+  <text x="510" y="88" text-anchor="middle" class="title">PDF extract</text>
+  <text x="510" y="108" text-anchor="middle" class="sub">pdfplumber ’ text</text>
+
+  <rect class="box" x="640" y="60" width="200" height="72"/>
+  <text x="740" y="88" text-anchor="middle" class="title">Pipeline</text>
+  <text x="740" y="108" text-anchor="middle" class="sub">validate ’ score ’ check</text>
+
+  <rect class="box" x="220" y="200" width="200" height="88"/>
+  <text x="320" y="232" text-anchor="middle" class="title">Embeddings</text>
+  <text x="320" y="252" text-anchor="middle" class="sub">SentenceTransformer</text>
+  <text x="320" y="272" text-anchor="middle" class="sub">all-MiniLM-L6-v2</text>
+
+  <rect class="box" x="460" y="200" width="220" height="88"/>
+  <text x="570" y="232" text-anchor="middle" class="title">Retrieval (RAG-style)</text>
+  <text x="570" y="252" text-anchor="middle" class="sub">per JD clause: best resume</text>
+  <text x="570" y="272" text-anchor="middle" class="sub">clause + confidence</text>
+
+  <rect class="box" x="720" y="200" width="160" height="88"/>
+  <text x="800" y="232" text-anchor="middle" class="title">Quality check</text>
+  <text x="800" y="252" text-anchor="middle" class="sub">mean / weak match</text>
+  <text x="800" y="272" text-anchor="middle" class="sub">flags uncertainty</text>
+
+  <rect class="human" x="360" y="340" width="200" height="64"/>
+  <text x="460" y="368" text-anchor="middle" class="title">Human + tests</text>
+  <text x="460" y="388" text-anchor="middle" class="sub">review output · pytest CI</text>
+
+  <path class="arrow" d="M180 96 H220"/>
+  <path class="arrow" d="M380 96 H420"/>
+  <path class="arrow" d="M600 96 H640"/>
+  <path class="arrow" d="M740 132 V180"/>
+  <path class="arrow" d="M320 168 V200"/>
+  <path class="arrow" d="M570 168 V200"/>
+  <path class="arrow" d="M800 168 V200"/>
+  <path class="arrow" d="M570 288 V320 H460"/>
+  <path class="arrow" d="M320 288 V310 H360"/>
+  <path class="arrow" d="M800 288 V310 H560"/>
+</svg>
